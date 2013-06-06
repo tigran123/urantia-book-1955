@@ -7,7 +7,7 @@ do
    dir=$(dirname "$path") 
    echo "Processing \"$file\" in \"$dir\""
    mkdir -p djvu/"${dir}"
-   cjb2 -losslevel 200 "${path}" "djvu/${path}".djvu
+   cjb2 -losslevel 100 "${path}" "djvu/${path}".djvu
    if [ $? -ne 0 ] ; then
        echo "ERROR: failed: cjb2 \"${path}\" \"djvu/${path}\".djvu"
        exit 1
